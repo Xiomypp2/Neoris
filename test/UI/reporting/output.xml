@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.5 on win32)" generated="20220711 16:36:01.471" rpa="false" schemaversion="3">
+<suite id="s1" name="Opencart" source="C:\Users\vivian.pena\Desktop\prueba_auto\test\UI\reporting\opencart.robot">
+<test id="s1-t1" name="prueba automatizacion" line="12">
+<kw name="Abrir navegador" library="config">
+<arg>prueba automatizacion</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url_open}</arg>
+<arg>${navegador}</arg>
+<arg>options=add_argument("--disable-popup-blocking"); add_argument("--ignore-certificate-errors")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220711 16:36:02.063" level="INFO">Opening browser 'Chrome' to base url 'http://opencart.abstracta.us/'.</msg>
+<status status="PASS" starttime="20220711 16:36:02.062" endtime="20220711 16:36:11.813"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220711 16:36:11.813" endtime="20220711 16:36:11.938"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[contains(@type,'text')]</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:11.938" endtime="20220711 16:36:11.969"/>
+</kw>
+<kw name="Crear Carpeta" library="GeneralActionsPhyton">
+<var>${ruta}</var>
+<arg>${_nombreCarpeta}</arg>
+<msg timestamp="20220711 16:36:11.970" level="INFO">no existe, se crea</msg>
+<msg timestamp="20220711 16:36:11.970" level="INFO">${ruta} = C:/B2B2C/test/reporting/11_07_16_11_prueba automatizacion/</msg>
+<status status="PASS" starttime="20220711 16:36:11.969" endtime="20220711 16:36:11.970"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${ruta}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220711 16:36:11.971" level="INFO">${ruta} = C:/B2B2C/test/reporting/11_07_16_11_prueba automatizacion/</msg>
+<status status="PASS" starttime="20220711 16:36:11.970" endtime="20220711 16:36:11.971"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:02.061" endtime="20220711 16:36:11.971"/>
+</kw>
+<kw name="Agregar primer producto" library="opencartAction">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Cargando tiempo corto</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Cargando tiempo corto">
+<msg timestamp="20220711 16:36:11.977" level="FAIL">No keyword with name 'Cargando tiempo corto' found.</msg>
+<status status="FAIL" starttime="20220711 16:36:11.977" endtime="20220711 16:36:11.977"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:11.973" endtime="20220711 16:36:11.977"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${_btn_anadir_primer_producto}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220711 16:36:11.977" endtime="20220711 16:36:12.269"/>
+</kw>
+<kw name="Click Elemento" library="generalActions">
+<arg>${_btn_anadir_primer_producto}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:12.270" endtime="20220711 16:36:12.291"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:12.291" endtime="20220711 16:36:12.323"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:12.324" endtime="20220711 16:36:12.336"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:12.336" level="INFO">Clicking element '(//span[@class='hidden-xs hidden-sm hidden-md'])[7]'.</msg>
+<status status="PASS" starttime="20220711 16:36:12.336" endtime="20220711 16:36:12.376"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:12.270" endtime="20220711 16:36:12.376"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Cargando</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Cargando">
+<msg timestamp="20220711 16:36:12.381" level="FAIL">No keyword with name 'Cargando' found.</msg>
+<status status="FAIL" starttime="20220711 16:36:12.381" endtime="20220711 16:36:12.381"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:12.376" endtime="20220711 16:36:12.381"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:11.972" endtime="20220711 16:36:12.381"/>
+</kw>
+<kw name="Agregar segundo producto" library="opencartAction">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${_btn_anadir_segundo_producto}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220711 16:36:12.382" endtime="20220711 16:36:12.657"/>
+</kw>
+<kw name="Click Elemento" library="generalActions">
+<arg>${_btn_anadir_segundo_producto}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:12.659" endtime="20220711 16:36:12.686"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:12.686" endtime="20220711 16:36:12.723"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:12.723" endtime="20220711 16:36:12.740"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:12.741" level="INFO">Clicking element '(//span[@class='hidden-xs hidden-sm hidden-md'])[8]'.</msg>
+<status status="PASS" starttime="20220711 16:36:12.740" endtime="20220711 16:36:12.784"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:12.658" endtime="20220711 16:36:12.784"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Cargando</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Cargando">
+<msg timestamp="20220711 16:36:12.791" level="FAIL">No keyword with name 'Cargando' found.</msg>
+<status status="FAIL" starttime="20220711 16:36:12.790" endtime="20220711 16:36:12.791"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:12.784" endtime="20220711 16:36:12.791"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:12.382" endtime="20220711 16:36:12.791"/>
+</kw>
+<kw name="Seleccionar carrito" library="opencartAction">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${btn_carrito_compras}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220711 16:36:12.792" endtime="20220711 16:36:13.075"/>
+</kw>
+<kw name="Click Elemento" library="generalActions">
+<arg>${btn_carrito_compras}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:13.076" endtime="20220711 16:36:13.101"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:13.101" endtime="20220711 16:36:13.140"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:13.140" endtime="20220711 16:36:13.160"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:13.160" level="INFO">Clicking element '//button[@data-loading-text='Loading...']'.</msg>
+<status status="PASS" starttime="20220711 16:36:13.160" endtime="20220711 16:36:13.202"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:13.075" endtime="20220711 16:36:13.202"/>
+</kw>
+<kw name="Click Elemento" library="generalActions">
+<arg>${btn_checkout}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:13.202" endtime="20220711 16:36:13.225"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:13.225" endtime="20220711 16:36:13.253"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:13.253" endtime="20220711 16:36:13.269"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:13.270" level="INFO">Clicking element '//strong[normalize-space()='Checkout']'.</msg>
+<status status="PASS" starttime="20220711 16:36:13.269" endtime="20220711 16:36:15.404"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:13.202" endtime="20220711 16:36:15.404"/>
+</kw>
+<kw name="tomar evidencia" library="generalActions">
+<arg>${ruta}</arg>
+<arg>productos.png</arg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${ruta}${nombre}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220711 16:36:15.541" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../../../../../B2B2C/test/reporting/11_07_16_11_prueba%20automatizacion/productos.png"&gt;&lt;img src="../../../../../../../B2B2C/test/reporting/11_07_16_11_prueba%20automatizacion/productos.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220711 16:36:15.406" endtime="20220711 16:36:15.541"/>
+</kw>
+<kw name="Set Screenshot Directory" library="ScreenCapLibrary">
+<arg>${ruta}</arg>
+<doc>Sets the directory where screenshots are saved.</doc>
+<status status="PASS" starttime="20220711 16:36:15.541" endtime="20220711 16:36:15.541"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:15.404" endtime="20220711 16:36:15.541"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:12.792" endtime="20220711 16:36:15.541"/>
+</kw>
+<kw name="Hacer checkout" library="opencartAction">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${rd_btn_checkout}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220711 16:36:15.553" endtime="20220711 16:36:15.832"/>
+</kw>
+<kw name="Click Elemento" library="generalActions">
+<arg>${rd_btn_checkout}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:15.835" endtime="20220711 16:36:15.863"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:15.863" endtime="20220711 16:36:15.896"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:15.896" endtime="20220711 16:36:15.913"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:15.914" level="INFO">Clicking element '//input[contains(@value,'guest')]'.</msg>
+<status status="PASS" starttime="20220711 16:36:15.914" endtime="20220711 16:36:15.959"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:15.834" endtime="20220711 16:36:15.959"/>
+</kw>
+<kw name="Click Elemento" library="generalActions">
+<arg>${_btn_netx_checkout}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:15.960" endtime="20220711 16:36:15.982"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:15.982" endtime="20220711 16:36:16.003"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:16.003" endtime="20220711 16:36:16.025"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:16.026" level="INFO">Clicking element '//input[contains(@value,'Continue')]'.</msg>
+<status status="PASS" starttime="20220711 16:36:16.026" endtime="20220711 16:36:16.070"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:15.960" endtime="20220711 16:36:16.070"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:15.552" endtime="20220711 16:36:16.070"/>
+</kw>
+<kw name="Ingresamos detalles facturacion" library="opencartTask">
+<kw name="Ingresar detalles facturacion" library="opencartAction">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${btn_carrito_compras}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220711 16:36:16.072" endtime="20220711 16:36:16.362"/>
+</kw>
+<kw name="Click Elemento" library="generalActions">
+<arg>${btn_carrito_compras}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:16.363" endtime="20220711 16:36:16.395"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:16.396" endtime="20220711 16:36:16.432"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:16.432" endtime="20220711 16:36:16.452"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:16.453" level="INFO">Clicking element '//button[@data-loading-text='Loading...']'.</msg>
+<status status="PASS" starttime="20220711 16:36:16.452" endtime="20220711 16:36:16.509"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:16.363" endtime="20220711 16:36:16.509"/>
+</kw>
+<kw name="Contenga elemento la pagina" library="generalActions">
+<arg>${titulo_checkout}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:16.510" endtime="20220711 16:36:16.545"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220711 16:36:16.546" endtime="20220711 16:36:16.558"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:16.558" endtime="20220711 16:36:16.579"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:16.510" endtime="20220711 16:36:16.579"/>
+</kw>
+<kw name="Ingresar Texto" library="generalActions">
+<arg>${input_prim_nom}</arg>
+<arg>test</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:16.580" endtime="20220711 16:36:16.609"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:16.609" endtime="20220711 16:36:16.634"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:16.634" endtime="20220711 16:36:16.653"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:16.654" level="INFO">Typing text 'test' into text field '//input[contains(@name,'firstname')]'.</msg>
+<status status="PASS" starttime="20220711 16:36:16.654" endtime="20220711 16:36:16.723"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:16.579" endtime="20220711 16:36:16.723"/>
+</kw>
+<kw name="Ingresar Texto" library="generalActions">
+<arg>${input_apellido}</arg>
+<arg>test</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:16.724" endtime="20220711 16:36:16.745"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:16.745" endtime="20220711 16:36:16.775"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:16.775" endtime="20220711 16:36:16.798"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:16.798" level="INFO">Typing text 'test' into text field '//input[contains(@name,'lastname')]'.</msg>
+<status status="PASS" starttime="20220711 16:36:16.798" endtime="20220711 16:36:16.878"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:16.723" endtime="20220711 16:36:16.878"/>
+</kw>
+<kw name="Ingresar Texto" library="generalActions">
+<arg>${input_email}</arg>
+<arg>test@gmail.com</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:16.878" endtime="20220711 16:36:16.904"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:16.905" endtime="20220711 16:36:16.939"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:16.940" endtime="20220711 16:36:16.959"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:16.960" level="INFO">Typing text 'test@gmail.com' into text field '//input[contains(@id,'input-payment-email')]'.</msg>
+<status status="PASS" starttime="20220711 16:36:16.959" endtime="20220711 16:36:17.039"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:16.878" endtime="20220711 16:36:17.039"/>
+</kw>
+<kw name="Ingresar Texto" library="generalActions">
+<arg>${input_telefono}</arg>
+<arg>3112223344</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:17.040" endtime="20220711 16:36:17.060"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:17.060" endtime="20220711 16:36:17.089"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:17.089" endtime="20220711 16:36:17.109"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:17.109" level="INFO">Typing text '3112223344' into text field '//input[contains(@name,'telephone')]'.</msg>
+<status status="PASS" starttime="20220711 16:36:17.109" endtime="20220711 16:36:17.182"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:17.040" endtime="20220711 16:36:17.183"/>
+</kw>
+<kw name="tomar evidencia" library="generalActions">
+<arg>${ruta}</arg>
+<arg>detallesfacturauno.png</arg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${ruta}${nombre}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220711 16:36:17.364" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../../../../../B2B2C/test/reporting/11_07_16_11_prueba%20automatizacion/detallesfacturauno.png"&gt;&lt;img src="../../../../../../../B2B2C/test/reporting/11_07_16_11_prueba%20automatizacion/detallesfacturauno.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220711 16:36:17.183" endtime="20220711 16:36:17.364"/>
+</kw>
+<kw name="Set Screenshot Directory" library="ScreenCapLibrary">
+<arg>${ruta}</arg>
+<doc>Sets the directory where screenshots are saved.</doc>
+<status status="PASS" starttime="20220711 16:36:17.364" endtime="20220711 16:36:17.365"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:17.183" endtime="20220711 16:36:17.365"/>
+</kw>
+<kw name="Ingresar Texto" library="generalActions">
+<arg>${input_direccion_uno}</arg>
+<arg>carrera 2 test 1</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:17.366" endtime="20220711 16:36:17.389"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:17.389" endtime="20220711 16:36:17.407"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:17.407" endtime="20220711 16:36:17.434"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:17.435" level="INFO">Typing text 'carrera 2 test 1' into text field '//input[contains(@name,'address_1')]'.</msg>
+<status status="PASS" starttime="20220711 16:36:17.434" endtime="20220711 16:36:17.513"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:17.365" endtime="20220711 16:36:17.513"/>
+</kw>
+<kw name="Ingresar Texto" library="generalActions">
+<arg>${input_cuidad}</arg>
+<arg>BOGOTA</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:17.514" endtime="20220711 16:36:17.535"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:17.536" endtime="20220711 16:36:17.565"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:17.565" endtime="20220711 16:36:17.586"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:17.587" level="INFO">Typing text 'BOGOTA' into text field '//input[contains(@name,'city')]'.</msg>
+<status status="PASS" starttime="20220711 16:36:17.587" endtime="20220711 16:36:17.660"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:17.513" endtime="20220711 16:36:17.660"/>
+</kw>
+<kw name="Ingresar Texto" library="generalActions">
+<arg>${input_postal}</arg>
+<arg>112211</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:17.662" endtime="20220711 16:36:17.685"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:17.687" endtime="20220711 16:36:17.716"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:17.716" endtime="20220711 16:36:17.737"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:17.738" level="INFO">Typing text '112211' into text field '//input[contains(@name,'postcode')]'.</msg>
+<status status="PASS" starttime="20220711 16:36:17.738" endtime="20220711 16:36:17.813"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:17.660" endtime="20220711 16:36:17.813"/>
+</kw>
+<kw name="Seleccionar listado por nombre" library="generalActions">
+<arg>${lista_pais}</arg>
+<arg>Colombia</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:17.814" endtime="20220711 16:36:17.834"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:17.834" endtime="20220711 16:36:17.866"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220711 16:36:17.883" level="INFO">Element '//select[contains(@name,'country_id')]' is displayed.</msg>
+<status status="PASS" starttime="20220711 16:36:17.866" endtime="20220711 16:36:17.883"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${data}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220711 16:36:17.884" level="INFO">Selecting options from selection list '//select[contains(@name,'country_id')]' by label Colombia.</msg>
+<status status="PASS" starttime="20220711 16:36:17.883" endtime="20220711 16:36:17.959"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:17.813" endtime="20220711 16:36:17.959"/>
+</kw>
+<kw name="Click Elemento" library="generalActions">
+<arg>//option[@value='720'][contains(.,'Amazonas')]</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:17.959" endtime="20220711 16:36:18.210"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:18.210" endtime="20220711 16:36:18.241"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:18.241" endtime="20220711 16:36:18.253"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:18.253" level="INFO">Clicking element '//option[@value='720'][contains(.,'Amazonas')]'.</msg>
+<status status="PASS" starttime="20220711 16:36:18.253" endtime="20220711 16:36:18.285"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:17.959" endtime="20220711 16:36:18.285"/>
+</kw>
+<kw name="tomar evidencia" library="generalActions">
+<arg>${ruta}</arg>
+<arg>detallesfactura.png</arg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${ruta}${nombre}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220711 16:36:18.439" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../../../../../B2B2C/test/reporting/11_07_16_11_prueba%20automatizacion/detallesfactura.png"&gt;&lt;img src="../../../../../../../B2B2C/test/reporting/11_07_16_11_prueba%20automatizacion/detallesfactura.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220711 16:36:18.287" endtime="20220711 16:36:18.439"/>
+</kw>
+<kw name="Set Screenshot Directory" library="ScreenCapLibrary">
+<arg>${ruta}</arg>
+<doc>Sets the directory where screenshots are saved.</doc>
+<status status="PASS" starttime="20220711 16:36:18.440" endtime="20220711 16:36:18.441"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:18.285" endtime="20220711 16:36:18.441"/>
+</kw>
+<kw name="Click Elemento" library="generalActions">
+<arg>${btn_continuar}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:18.442" endtime="20220711 16:36:18.464"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:18.464" endtime="20220711 16:36:18.493"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:18.493" endtime="20220711 16:36:18.507"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:18.507" level="INFO">Clicking element '//input[contains(@id,'button-guest')]'.</msg>
+<status status="PASS" starttime="20220711 16:36:18.507" endtime="20220711 16:36:18.556"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:18.441" endtime="20220711 16:36:18.556"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:16.072" endtime="20220711 16:36:18.556"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:16.071" endtime="20220711 16:36:18.556"/>
+</kw>
+<kw name="Ingresamos datos metodo pago" library="opencartTask">
+<kw name="Ingresar datos metodo pago" library="opencartAction">
+<kw name="Click Elemento" library="generalActions">
+<arg>${check_terminos_condiciones}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:18.559" endtime="20220711 16:36:19.260"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:19.260" endtime="20220711 16:36:19.291"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:19.291" endtime="20220711 16:36:19.303"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:19.303" level="INFO">Clicking element '//input[contains(@name,'agree')]'.</msg>
+<status status="PASS" starttime="20220711 16:36:19.303" endtime="20220711 16:36:19.349"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:18.558" endtime="20220711 16:36:19.349"/>
+</kw>
+<kw name="Click Elemento" library="generalActions">
+<arg>${btn_continuar_met_entrega}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:19.350" endtime="20220711 16:36:19.371"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:19.371" endtime="20220711 16:36:19.400"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:19.401" endtime="20220711 16:36:19.415"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:19.417" level="INFO">Clicking element '//input[contains(@id,'button-payment-method')]'.</msg>
+<status status="PASS" starttime="20220711 16:36:19.415" endtime="20220711 16:36:19.460"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:19.350" endtime="20220711 16:36:19.460"/>
+</kw>
+<kw name="tomar evidencia" library="generalActions">
+<arg>${ruta}</arg>
+<arg>orden.png</arg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${ruta}${nombre}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220711 16:36:19.582" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../../../../../B2B2C/test/reporting/11_07_16_11_prueba%20automatizacion/orden.png"&gt;&lt;img src="../../../../../../../B2B2C/test/reporting/11_07_16_11_prueba%20automatizacion/orden.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220711 16:36:19.461" endtime="20220711 16:36:19.582"/>
+</kw>
+<kw name="Set Screenshot Directory" library="ScreenCapLibrary">
+<arg>${ruta}</arg>
+<doc>Sets the directory where screenshots are saved.</doc>
+<status status="PASS" starttime="20220711 16:36:19.582" endtime="20220711 16:36:19.583"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:19.461" endtime="20220711 16:36:19.583"/>
+</kw>
+<kw name="Click Elemento" library="generalActions">
+<arg>${btn_confirmar_pedido}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:19.583" endtime="20220711 16:36:20.058"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220711 16:36:20.058" endtime="20220711 16:36:20.095"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:20.095" endtime="20220711 16:36:20.116"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220711 16:36:20.116" level="INFO">Clicking element '//input[contains(@value,'Confirm Order')]'.</msg>
+<status status="PASS" starttime="20220711 16:36:20.116" endtime="20220711 16:36:20.173"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:19.583" endtime="20220711 16:36:20.173"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:18.558" endtime="20220711 16:36:20.173"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:18.558" endtime="20220711 16:36:20.173"/>
+</kw>
+<kw name="Validamos pedido" library="opencartQuestions">
+<kw name="Validar pedido" library="opencartAction">
+<kw name="Contenga elemento la pagina" library="generalActions">
+<arg>${titulo_confirmacion_orden}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220711 16:36:20.177" endtime="20220711 16:36:20.889"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${_Sleep}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220711 16:36:20.889" endtime="20220711 16:36:20.900"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220711 16:36:20.901" endtime="20220711 16:36:20.913"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:20.176" endtime="20220711 16:36:20.913"/>
+</kw>
+<kw name="tomar evidencia" library="generalActions">
+<arg>${ruta}</arg>
+<arg>confirmacion_pedido.png</arg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${ruta}${nombre}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220711 16:36:21.036" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../../../../../B2B2C/test/reporting/11_07_16_11_prueba%20automatizacion/confirmacion_pedido.png"&gt;&lt;img src="../../../../../../../B2B2C/test/reporting/11_07_16_11_prueba%20automatizacion/confirmacion_pedido.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220711 16:36:20.914" endtime="20220711 16:36:21.036"/>
+</kw>
+<kw name="Set Screenshot Directory" library="ScreenCapLibrary">
+<arg>${ruta}</arg>
+<doc>Sets the directory where screenshots are saved.</doc>
+<status status="PASS" starttime="20220711 16:36:21.036" endtime="20220711 16:36:21.037"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:20.914" endtime="20220711 16:36:21.037"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:20.176" endtime="20220711 16:36:21.037"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:20.175" endtime="20220711 16:36:21.037"/>
+</kw>
+<status status="PASS" starttime="20220711 16:36:02.060" endtime="20220711 16:36:21.038"/>
+</test>
+<status status="PASS" starttime="20220711 16:36:01.471" endtime="20220711 16:36:21.039"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Opencart">Opencart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
